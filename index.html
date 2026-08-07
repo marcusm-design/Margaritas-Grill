@@ -1,176 +1,511 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self';
-  style-src 'self' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
-  img-src 'self' data: https:;
-  media-src 'self';
-  frame-src https://maps.google.com https://www.google.com;
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  upgrade-insecure-requests;
-">
-  <meta name="description" content="Margaritas Grill — Mexican seafood restaurant in Winnemucca, Nevada.">
-  <title>Margaritas Grill</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
-<header class="header">
-  <div class="container header__inner">
-    <a href="#home" class="logo">Margaritas Grill</a>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    />
 
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#location">Location</a>
-      <a href="#gallery">Gallery</a>
-    </nav>
-  </div>
-</header>
+    <meta
+      name="referrer"
+      content="strict-origin-when-cross-origin"
+    />
 
-<main>
-  <section id="home" class="hero">
-    <div class="container hero__content">
-      <p class="hero__eyebrow">Winnemucca, Nevada</p>
-      <h1>Margaritas Grill</h1>
-      <p class="hero__tagline">Coastal Mexican Seafood &amp; Grill</p>
-      <p class="hero__text">Fresh ceviche, sizzling camarones, and bold coastal flavors — served with warmth and tradition.</p>
+    <meta
+      name="description"
+      content="Margaritas Grill — Mexican seafood restaurant in Winnemucca, Nevada."
+    />
 
-      <div class="hero__buttons">
-        <a href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu" class="btn btn--primary" target="_blank" rel="noopener">View Menu</a>
-        <a href="tel:+17755550198" class="btn btn--secondary">Call Now</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=47+East+Winnemucca+Blvd+Winnemucca+Nevada" class="btn btn--outline" target="_blank" rel="noopener">Get Directions</a>
-      </div>
+    <title>Margaritas Grill</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;display=swap"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="home-page">
+    <!-- Top-left business menu -->
+    <div class="corner-menu">
+      <button
+        class="corner-menu__button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="corner-menu-panel"
+        aria-label="Open menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav
+        class="corner-menu__panel"
+        id="corner-menu-panel"
+        aria-label="More information"
+      >
+        <p class="corner-menu__title">More</p>
+        <a href="careers.html">Careers</a>
+        <a href="#location">Contact Us</a>
+      </nav>
     </div>
-  </section>
 
-  <section id="about" class="section">
-    <div class="container about">
-      <div class="about__image about-video">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="videos/0713.mp4" type="video/mp4">
-          Your browser does not support video playback.
-        </video>
+    <!-- Main header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#home" class="logo">
+          Margaritas Grill
+        </a>
+
+        <nav
+          class="nav"
+          aria-label="Primary navigation"
+        >
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#location">Location</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="about__text">
-        <h2>About Us</h2>
-        <p>Margaritas Grill brings the spirit of Mexico's Pacific coast to Nevada — bold ceviches, garlic butter camarones, and platillos meant to be shared around the table.</p>
-        <p>Our kitchen honors tradition with fresh seafood daily, house-made salsas, and recipes passed through generations.</p>
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="container hero__content">
+          <p class="hero__eyebrow">
+            Winnemucca, Nevada
+          </p>
 
-        <ul class="about__list">
-          <li>Fresh seafood &amp; house-made salsas</li>
-          <li>Full bar with craft margaritas</li>
-          <li>Family-friendly dining</li>
-        </ul>
+          <h1>Margaritas Grill</h1>
 
-        <div id="menu" class="about__buttons">
-          <a href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu" class="btn btn--primary" target="_blank" rel="noopener">View Menu</a>
-          <a href="https://onlineordering.edgeservpos.com/margaritasgrill" class="btn btn--secondary" target="_blank" rel="noopener">Order Online</a>
+          <p class="hero__tagline">
+            Coastal Mexican Seafood &amp; Grill
+          </p>
+
+          <p class="hero__text">
+            Fresh ceviche, sizzling camarones, and bold
+            coastal flavors — served with warmth and
+            tradition.
+          </p>
+
+          <div class="hero__buttons">
+            <a
+              href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
+              class="btn btn--primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Menu
+            </a>
+
+            <a
+              href="tel:+17755550198"
+              class="btn btn--secondary"
+            >
+              Call Now
+            </a>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=47+East+Winnemucca+Blvd+Winnemucca+Nevada"
+              class="btn btn--outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="location" class="section">
-    <div class="container location">
-      <div class="location__info">
-        <h2>Visit Us</h2>
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container about">
+          <div class="about__image about-video">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source
+                src="videos/0713.mp4"
+                type="video/mp4"
+              />
 
-        <address>
-          <strong>Margaritas Grill</strong><br>
-          47 East Winnemucca Blvd<br>
-          Winnemucca, Nevada
-        </address>
+              Your browser does not support video
+              playback.
+            </video>
+          </div>
 
-        <p class="location__phone">
-          <a href="tel:+17755550198">(775) 555-0198</a>
+          <div class="about__text">
+            <h2>About Us</h2>
+
+            <p>
+              Margaritas Grill brings the spirit of
+              Mexico's Pacific coast to Nevada — bold
+              ceviches, garlic butter camarones, and
+              platillos meant to be shared around the
+              table.
+            </p>
+
+            <p>
+              Our kitchen honors tradition with fresh
+              seafood daily, house-made salsas, and recipes
+              passed through generations.
+            </p>
+
+            <ul class="about__list">
+              <li>
+                Fresh seafood &amp; house-made salsas
+              </li>
+
+              <li>
+                Full bar with craft margaritas
+              </li>
+
+              <li>
+                Family-friendly dining
+              </li>
+            </ul>
+
+            <div
+              id="menu"
+              class="about__buttons"
+            >
+              <a
+                href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
+                class="btn btn--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Menu
+              </a>
+
+              <a
+                href="https://onlineordering.edgeservpos.com/margaritasgrill"
+                class="btn btn--secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Online
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location -->
+      <section id="location" class="section">
+        <div class="container location">
+          <div class="location__info">
+            <h2>Visit Us</h2>
+
+            <address>
+              <strong>Margaritas Grill</strong><br />
+              47 East Winnemucca Blvd<br />
+              Winnemucca, Nevada
+            </address>
+
+            <p class="location__phone">
+              <a href="tel:+17755550198">
+                (775) 555-0198
+              </a>
+            </p>
+
+            <dl class="hours">
+              <div>
+                <dt>Mon – Thu</dt>
+                <dd>11:00 AM – 9:00 PM</dd>
+              </div>
+
+              <div>
+                <dt>Fri – Sat</dt>
+                <dd>11:00 AM – 10:00 PM</dd>
+              </div>
+
+              <div>
+                <dt>Sunday</dt>
+                <dd>10:00 AM – 9:00 PM</dd>
+              </div>
+            </dl>
+
+            <div class="hero__buttons">
+              <a
+                href="tel:+17755550198"
+                class="btn btn--secondary"
+              >
+                Call Now
+              </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=47+East+Winnemucca+Blvd+Winnemucca+Nevada"
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+
+          <div class="location__map">
+            <iframe
+              title="Map showing Margaritas Grill in Winnemucca, Nevada"
+              src="https://maps.google.com/maps?q=47+East+Winnemucca+Blvd+Winnemucca+Nevada&amp;z=15&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section
+        id="gallery"
+        class="section gallery-section"
+      >
+        <div class="gallery-container">
+          <h2 class="section__title">
+            Gallery
+          </h2>
+
+          <div class="gallery">
+            <img
+              src="images/gallery 1.png"
+              alt="Margaritas Grill photo 1"
+              loading="lazy"
+            />
+
+            <img
+              src="images/gallery 2.png"
+              alt="Margaritas Grill photo 2"
+              loading="lazy"
+            />
+
+            <img
+              src="images/gallery 3.png"
+              alt="Margaritas Grill photo 3"
+              loading="lazy"
+            />
+
+            <img
+              src="images/gallery 4.png"
+              alt="Margaritas Grill photo 4"
+              loading="lazy"
+            />
+
+            <img
+              src="images/gallery 5.png"
+              alt="Margaritas Grill photo 5"
+              loading="lazy"
+            />
+
+            <img
+              src="images/gallery 6.png"
+              alt="Margaritas Grill photo 6"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery__button">
+            <a
+              href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
+              class="btn btn--primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guest reviews -->
+      <section
+        class="restaurant-reviews reviews-margaritas"
+        id="reviews"
+        aria-labelledby="reviews-heading"
+      >
+        <div class="reviews-shell">
+          <p class="reviews-kicker">
+            Guest Reviews
+          </p>
+
+          <h2 id="reviews-heading">
+            What Our Guests Are Saying
+          </h2>
+
+          <div
+            class="reviews-window"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Guest reviews"
+            tabindex="0"
+          >
+            <div class="reviews-track">
+              <article class="review-slide">
+                <h3 class="visually-hidden">
+                  Review 1 of 3
+                </h3>
+
+                <div class="review-stars">
+                  <span class="visually-hidden">
+                    Five stars
+                  </span>
+
+                  <span aria-hidden="true">
+                    ★★★★★
+                  </span>
+                </div>
+
+                <p class="review-text">
+                  “Fresh flavors, colorful plates, and a
+                  welcoming atmosphere made this a wonderful
+                  place for dinner with family and friends.”
+                </p>
+
+                <p class="review-name">
+                  Guest Name
+                </p>
+
+                <p class="review-source">
+                  Review Placeholder
+                </p>
+              </article>
+
+              <article class="review-slide">
+                <h3 class="visually-hidden">
+                  Review 2 of 3
+                </h3>
+
+                <div class="review-stars">
+                  <span class="visually-hidden">
+                    Five stars
+                  </span>
+
+                  <span aria-hidden="true">
+                    ★★★★★
+                  </span>
+                </div>
+
+                <p class="review-text">
+                  “The food was flavorful, the service was
+                  friendly, and everyone at our table found
+                  something they enjoyed.”
+                </p>
+
+                <p class="review-name">
+                  Guest Name
+                </p>
+
+                <p class="review-source">
+                  Review Placeholder
+                </p>
+              </article>
+
+              <article class="review-slide">
+                <h3 class="visually-hidden">
+                  Review 3 of 3
+                </h3>
+
+                <div class="review-stars">
+                  <span class="visually-hidden">
+                    Five stars
+                  </span>
+
+                  <span aria-hidden="true">
+                    ★★★★★
+                  </span>
+                </div>
+
+                <p class="review-text">
+                  “A relaxed local restaurant with generous
+                  portions and a menu that made us want to
+                  come back.”
+                </p>
+
+                <p class="review-name">
+                  Guest Name
+                </p>
+
+                <p class="review-source">
+                  Review Placeholder
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div
+            class="review-controls"
+            role="group"
+            aria-label="Review controls"
+          >
+            <button
+              class="review-arrow"
+              type="button"
+              data-review-previous
+              aria-label="Previous review"
+            >
+              ←
+            </button>
+
+            <p class="review-counter">
+              <span data-review-current>1</span> / 3
+            </p>
+
+            <button
+              class="review-arrow"
+              type="button"
+              data-review-next
+              aria-label="Next review"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>
+          &copy; 2026 Margaritas Grill. All rights
+          reserved.
         </p>
 
-        <dl class="hours">
-          <div>
-            <dt>Mon – Thu</dt>
-            <dd>11:00 AM – 9:00 PM</dd>
-          </div>
-
-          <div>
-            <dt>Fri – Sat</dt>
-            <dd>11:00 AM – 10:00 PM</dd>
-          </div>
-
-          <div>
-            <dt>Sunday</dt>
-            <dd>10:00 AM – 9:00 PM</dd>
-          </div>
-        </dl>
-
-        <div class="hero__buttons">
-          <a href="tel:+17755550198" class="btn btn--secondary">Call Now</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=47+East++Winnemucca+Blvd" class="btn btn--outline" target="_blank" rel="noopener">Get Directions</a>
-        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#location">Location</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
       </div>
+    </footer>
 
-      <div class="location__map">
-        <iframe
-          title="Margaritas Grill map"
-          src="https://maps.google.com/maps?q=1234+Main+Street+Winnemucca+Nevada&z=15&output=embed"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery" class="section gallery-section">
-    <div class="gallery-container">
-      <h2 class="section__title">Gallery</h2>
-  
-      <div class="gallery">
-        <img src="images/gallery 1.png" alt="Margaritas Grill photo 1">
-        <img src="images/gallery 2.png" alt="Margaritas Grill photo 2">
-        <img src="images/gallery 3.png" alt="Margaritas Grill photo 3">
-        <img src="images/gallery 4.png" alt="Margaritas Grill photo 4">
-        <img src="images/gallery 5.png" alt="Margaritas Grill photo 5">
-        <img src="images/gallery 6.png" alt="Margaritas Grill photo 6">
-      </div>
-
-      <div class="gallery__button">
-        <a href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
-           class="btn btn--primary"
-           target="_blank"
-           rel="noopener">
-          View More
-        </a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <p>&copy; 2026 Margaritas Grill. All rights reserved.</p>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#location">Location</a>
-      <a href="#gallery">Gallery</a>
-    </nav>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
