@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self' https://formspree.io;
+        upgrade-insecure-requests;
+      "
+    />
+
+    <meta
+      name="referrer"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <meta
+      name="description"
+      content="Explore career opportunities and learn about joining the team at Margaritas Grill."
+    />
+
+    <title>Careers — Margaritas Grill</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;display=swap"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Top-left business menu -->
+    <div class="corner-menu">
+      <button
+        class="corner-menu__button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="corner-menu-panel"
+        aria-label="Open menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav
+        class="corner-menu__panel"
+        id="corner-menu-panel"
+        aria-label="More information"
+      >
+        <p class="corner-menu__title">More</p>
+
+        <a
+          href="careers.html"
+          aria-current="page"
+        >
+          Careers
+        </a>
+
+        <a href="index.html#location">
+          Contact Us
+        </a>
+      </nav>
+    </div>
+
+    <!-- Careers header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#careers-top" class="logo">
+          Margaritas Grill
+        </a>
+
+        <nav
+          class="nav"
+          aria-label="Careers navigation"
+        >
+          <a href="index.html#home">
+            Main Website
+          </a>
+
+          <a href="#positions">
+            Opportunities
+          </a>
+
+          <a href="#benefits">
+            Why Join Us
+          </a>
+
+          <a href="#process">
+            How to Apply
+          </a>
+
+          <a href="#application">
+            Apply Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="careers-page">
+      <!-- Careers hero -->
+      <section
+        class="careers-hero"
+        id="careers-top"
+      >
+        <div
+          class="container careers-hero__content"
+        >
+          <p class="careers-eyebrow">
+            Careers at Margaritas Grill
+          </p>
+
+          <h1>
+            Join the Margaritas Grill Team
+          </h1>
+
+          <p class="careers-hero__description">
+            Become part of a welcoming restaurant team
+            focused on flavorful food, friendly service,
+            and memorable experiences for every guest.
+          </p>
+
+          <div class="careers-actions">
+            <a
+              href="#positions"
+              class="btn btn--primary"
+            >
+              View Opportunities
+            </a>
+
+            <a
+              href="#application"
+              class="btn btn--outline"
+            >
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Positions -->
+      <section
+        class="careers-section careers-positions"
+        id="positions"
+        aria-labelledby="positions-heading"
+      >
+        <div class="container">
+          <header
+            class="careers-section__header"
+          >
+            <p class="careers-eyebrow">
+              Opportunities
+            </p>
+
+            <h2 id="positions-heading">
+              Roles We Often Hire For
+            </h2>
+
+            <p>
+              Available positions may change. Contact
+              Margaritas Grill to ask which opportunities
+              are currently available.
+            </p>
+          </header>
+
+          <div class="careers-card-grid">
+            <article class="careers-card">
+              <p
+                class="careers-card__number"
+                aria-hidden="true"
+              >
+                01
+              </p>
+
+              <h3>Front of House</h3>
+
+              <ul>
+                <li>Servers</li>
+                <li>Hosts</li>
+                <li>Bartenders</li>
+              </ul>
+            </article>
+
+            <article class="careers-card">
+              <p
+                class="careers-card__number"
+                aria-hidden="true"
+              >
+                02
+              </p>
+
+              <h3>Kitchen Team</h3>
+
+              <ul>
+                <li>Line cooks</li>
+                <li>Prep cooks</li>
+                <li>Dishwashers</li>
+              </ul>
+            </article>
+
+            <article class="careers-card">
+              <p
+                class="careers-card__number"
+                aria-hidden="true"
+              >
+                03
+              </p>
+
+              <h3>
+                Leadership &amp; Support
+              </h3>
+
+              <ul>
+                <li>Shift leaders</li>
+                <li>Restaurant managers</li>
+                <li>
+                  Catering and event staff
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section
+        class="careers-section careers-benefits"
+        id="benefits"
+        aria-labelledby="benefits-heading"
+      >
+        <div class="container">
+          <header
+            class="careers-section__header"
+          >
+            <p class="careers-eyebrow">
+              Working Here
+            </p>
+
+            <h2 id="benefits-heading">
+              Why Join Our Team?
+            </h2>
+
+            <p>
+              Benefits and opportunities may depend on the
+              position, schedule, and current restaurant
+              policies.
+            </p>
+          </header>
+
+          <!-- Confirm these benefits with the restaurant -->
+          <div class="careers-benefit-grid">
+            <article class="careers-benefit">
+              <h3>Flexible Scheduling</h3>
+
+              <p>
+                Scheduling options may be available for
+                different positions and levels of
+                availability.
+              </p>
+            </article>
+
+            <article class="careers-benefit">
+              <h3>Employee Meals</h3>
+
+              <p>
+                Employee meal opportunities may be
+                available according to restaurant policy.
+              </p>
+            </article>
+
+            <article class="careers-benefit">
+              <h3>Training</h3>
+
+              <p>
+                Learn restaurant skills while working with
+                an experienced and supportive team.
+              </p>
+            </article>
+
+            <article class="careers-benefit">
+              <h3>Opportunities to Grow</h3>
+
+              <p>
+                Develop your abilities and prepare for
+                additional responsibilities when
+                opportunities are available.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team values -->
+      <section
+        class="careers-section careers-values"
+        aria-labelledby="values-heading"
+      >
+        <div
+          class="container careers-values__layout"
+        >
+          <div class="careers-values__intro">
+            <p class="careers-eyebrow">
+              Our Team
+            </p>
+
+            <h2 id="values-heading">
+              What We Look For
+            </h2>
+
+            <p>
+              Restaurant experience can be helpful, but a
+              positive attitude and willingness to learn
+              are important too.
+            </p>
+          </div>
+
+          <ul class="careers-checklist">
+            <li>Dependable and punctual</li>
+            <li>Friendly and respectful</li>
+
+            <li>
+              Comfortable working with a team
+            </li>
+
+            <li>Willing to learn</li>
+
+            <li>
+              Able to work in a fast-paced restaurant
+            </li>
+
+            <li>
+              Previous experience is helpful but not
+              required for every role
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Application process -->
+      <section
+        class="careers-section careers-process"
+        id="process"
+        aria-labelledby="process-heading"
+      >
+        <div class="container">
+          <header
+            class="careers-section__header"
+          >
+            <p class="careers-eyebrow">
+              Application Process
+            </p>
+
+            <h2 id="process-heading">
+              How to Apply
+            </h2>
+          </header>
+
+          <ol class="careers-process__steps">
+            <li>
+              <span aria-hidden="true">1</span>
+
+              <div>
+                <h3>Choose a Position</h3>
+
+                <p>
+                  Select the role or team that interests
+                  you.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span aria-hidden="true">2</span>
+
+              <div>
+                <h3>Complete the Form</h3>
+
+                <p>
+                  Tell us about your availability and
+                  previous experience.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span aria-hidden="true">3</span>
+
+              <div>
+                <h3>Management Review</h3>
+
+                <p>
+                  A manager may contact you if your
+                  experience and availability match a
+                  current opening.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Application form -->
+      <section
+        class="careers-section careers-application"
+        id="application"
+        aria-labelledby="application-heading"
+      >
+        <div
+          class="container careers-application__layout"
+        >
+          <div
+            class="careers-application__intro"
+          >
+            <p class="careers-eyebrow">
+              Apply
+            </p>
+
+            <h2 id="application-heading">
+              Tell Us About Yourself
+            </h2>
+
+            <p>
+              Complete this interest form to tell
+              Margaritas Grill which position interests
+              you.
+            </p>
+
+            <p class="careers-form-warning">
+              Applications are sent to restaurant
+              management for employment consideration. Do
+              not include private or sensitive
+              information.
+            </p>
+          </div>
+
+          <!--
+            Formspree processes this form.
+            Its endpoint identifier is public by design.
+          -->
+          <form
+            class="careers-form"
+            id="careers-form"
+            action="https://formspree.io/f/mwlevezz"
+            method="POST"
+            accept-charset="UTF-8"
+          >
+            <!-- Spam trap: users should leave this empty -->
+            <div
+              class="careers-honeypot"
+              aria-hidden="true"
+            >
+              <label for="company-website">
+                Leave this field empty
+              </label>
+
+              <input
+                id="company-website"
+                name="_gotcha"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="careers-form__grid">
+              <div class="careers-field">
+                <label for="applicant-name">
+                  Full name
+                </label>
+
+                <input
+                  id="applicant-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="100"
+                  required
+                />
+              </div>
+
+              <div class="careers-field">
+                <label for="applicant-email">
+                  Email address
+                </label>
+
+                <input
+                  id="applicant-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                />
+              </div>
+
+              <div class="careers-field">
+                <label for="applicant-phone">
+                  Phone number
+                </label>
+
+                <input
+                  id="applicant-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  maxlength="30"
+                  required
+                />
+              </div>
+
+              <div class="careers-field">
+                <label for="position-interest">
+                  Position of interest
+                </label>
+
+                <select
+                  id="position-interest"
+                  name="position"
+                  required
+                >
+                  <option value="">
+                    Choose a position
+                  </option>
+
+                  <option value="server">
+                    Server
+                  </option>
+
+                  <option value="host">
+                    Host
+                  </option>
+
+                  <option value="bartender">
+                    Bartender
+                  </option>
+
+                  <option value="line-cook">
+                    Line Cook
+                  </option>
+
+                  <option value="prep-cook">
+                    Prep Cook
+                  </option>
+
+                  <option value="dishwasher">
+                    Dishwasher
+                  </option>
+
+                  <option value="catering">
+                    Catering Staff
+                  </option>
+
+                  <option value="shift-leader">
+                    Shift Leader
+                  </option>
+
+                  <option value="manager">
+                    Restaurant Manager
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <fieldset class="careers-fieldset">
+              <legend>
+                Employment preference
+              </legend>
+
+              <div class="careers-radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="employment-preference"
+                    value="full-time"
+                    required
+                  />
+
+                  Full-time
+                </label>
+
+                <label>
+                  <input
+                    type="radio"
+                    name="employment-preference"
+                    value="part-time"
+                  />
+
+                  Part-time
+                </label>
+
+                <label>
+                  <input
+                    type="radio"
+                    name="employment-preference"
+                    value="either"
+                  />
+
+                  Either
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="careers-field">
+              <label for="availability">
+                General availability
+              </label>
+
+              <textarea
+                id="availability"
+                name="availability"
+                rows="4"
+                maxlength="500"
+                required
+                placeholder="List the days and times you are generally available."
+              ></textarea>
+            </div>
+
+            <div class="careers-field">
+              <label for="experience">
+                Previous restaurant experience
+              </label>
+
+              <textarea
+                id="experience"
+                name="experience"
+                rows="5"
+                maxlength="1500"
+                placeholder="Briefly describe relevant experience, if any."
+              ></textarea>
+            </div>
+
+            <div class="careers-field">
+              <label for="applicant-message">
+                Short message
+              </label>
+
+              <textarea
+                id="applicant-message"
+                name="message"
+                rows="5"
+                maxlength="1500"
+                placeholder="Tell us why you are interested in joining the team."
+              ></textarea>
+            </div>
+
+            <p class="careers-privacy-note">
+              Do not include Social Security numbers,
+              banking information, identification
+              documents, medical information, or other
+              sensitive details.
+            </p>
+
+            <button
+              class="btn btn--primary"
+              type="submit"
+            >
+              Submit Interest
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Equal opportunity statement -->
+      <section
+        class="careers-equal-opportunity"
+        aria-labelledby="equal-opportunity-heading"
+      >
+        <div class="container">
+          <h2 id="equal-opportunity-heading">
+            Equal Employment Opportunity
+          </h2>
+
+          <p>
+            Margaritas Grill is committed to providing
+            equal employment opportunities to qualified
+            applicants without unlawful discrimination.
+          </p>
+        </div>
+      </section>
+
+      <!-- Final call to action -->
+      <section class="careers-final-cta">
+        <div class="container">
+          <p class="careers-eyebrow">
+            Take the Next Step
+          </p>
+
+          <h2>Ready to Join the Team?</h2>
+
+          <p>
+            Complete the interest form or contact
+            Margaritas Grill to ask about current
+            opportunities.
+          </p>
+
+          <div class="careers-actions">
+            <a
+              href="#application"
+              class="btn btn--primary"
+            >
+              Apply Now
+            </a>
+
+            <a
+              href="index.html#location"
+              class="btn btn--outline"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Careers footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>
+          &copy; 2026 Margaritas Grill. All rights
+          reserved.
+        </p>
+
+        <nav
+          aria-label="Careers footer navigation"
+        >
+          <a href="index.html#home">
+            Main Website
+          </a>
+
+          <a href="#positions">
+            Opportunities
+          </a>
+
+          <a href="#benefits">
+            Why Join Us
+          </a>
+
+          <a href="#application">
+            Apply Now
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
