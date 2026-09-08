@@ -301,7 +301,15 @@ html:not(.js) .intro {
 
 .nav {
   display: flex;
+  align-items: center;
   gap: 1.6rem;
+}
+
+/* Keep the wordmark clear of the fixed top-left corner menu */
+@media (min-width: 821px) and (max-width: 1320px) {
+  .home-page .header__inner {
+    padding-left: 4.25rem;
+  }
 }
 
 .nav a {
@@ -1178,13 +1186,17 @@ address {
 }
 
 .lightbox__inner {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem 1rem;
 }
 
 .lightbox__figure {
+  grid-column: 2;
+  grid-row: 1;
   margin: 0;
   display: grid;
   place-items: center;
@@ -1200,8 +1212,9 @@ address {
 
 .lightbox__close {
   position: absolute;
-  top: -3rem;
-  right: 0;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
   display: grid;
   width: 2.8rem;
   height: 2.8rem;
@@ -1216,6 +1229,16 @@ address {
   transition:
     background 0.2s ease,
     transform 0.2s ease;
+}
+
+.lightbox__nav--prev {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lightbox__nav--next {
+  grid-column: 3;
+  grid-row: 1;
 }
 
 .lightbox__nav {
@@ -1244,14 +1267,14 @@ address {
 }
 
 .lightbox__counter {
-  position: absolute;
-  bottom: -2.5rem;
-  left: 50%;
-  color: var(--text-muted);
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
+  color: var(--cream);
   font-size: 0.95rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
+  text-align: center;
   font-variant-numeric: tabular-nums;
-  transform: translateX(-50%);
 }
 
 /* Reviews */
@@ -2232,6 +2255,14 @@ body.no-scroll {
     gap: 0.75rem;
   }
 
+  .home-page .header__inner {
+    padding-left: 4rem;
+  }
+
+  .home-page .nav .theme-toggle {
+    margin-top: 0.5rem;
+  }
+
   .home-page .header .nav {
     position: fixed;
     inset: 0;
@@ -2368,6 +2399,17 @@ body.no-scroll {
 
   .lightbox__inner {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .lightbox__figure {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .lightbox__counter {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .lightbox__nav {
@@ -2378,10 +2420,12 @@ body.no-scroll {
 
   .lightbox__nav--prev {
     left: 0.4rem;
+    grid-row: 1;
   }
 
   .lightbox__nav--next {
     right: 0.4rem;
+    grid-row: 1;
   }
 
   .careers-page {
