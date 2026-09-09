@@ -19,6 +19,10 @@
       content="Margaritas Grill — Mexican seafood restaurant in Winnemucca, Nevada."
     />
 
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
+
     <title>Margaritas Grill</title>
 
     <link
@@ -34,13 +38,29 @@
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;display=swap"
     />
 
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body class="home-page">
+    <!-- Cinematic opening -->
+    <div class="intro" id="intro" aria-hidden="true">
+      <div class="intro__inner">
+        <img
+          class="intro__logo"
+          src="images/Mrgts Logo.png"
+          alt=""
+          decoding="async"
+        />
+        <span class="intro__word">Margaritas Grill</span>
+        <span class="intro__line" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#home">Skip to content</a>
+
     <!-- Top-left business menu -->
     <div class="corner-menu">
       <button
@@ -67,29 +87,59 @@
     </div>
 
     <!-- Main header -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="container header__inner">
         <a href="#home" class="logo">
           Margaritas Grill
         </a>
 
-        <nav
-          class="nav"
-          aria-label="Primary navigation"
-        >
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#menu">Menu</a>
-          <a href="#location">Location</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#reviews">Reviews</a>
-        </nav>
+        <div class="header__actions">
+          <nav
+            class="nav"
+            id="primary-nav"
+            aria-label="Primary navigation"
+          >
+            <a href="#home" class="nav__link">Home</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#menu" class="nav__link">Menu</a>
+            <a href="#location" class="nav__link">Location</a>
+            <a href="#gallery" class="nav__link">Gallery</a>
+            <a href="#reviews" class="nav__link">Reviews</a>
+
+            <button
+              class="theme-toggle"
+              type="button"
+              data-theme-toggle
+              aria-pressed="false"
+              aria-label="Switch to warm lighting"
+            >
+              <span class="theme-toggle__track" aria-hidden="true">
+                <span class="theme-toggle__thumb"></span>
+              </span>
+            </button>
+          </nav>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            aria-label="Open navigation"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- Hero -->
-      <section id="home" class="hero">
+      <section id="home" class="hero" data-reveal-root>
+        <div class="hero__backdrop" aria-hidden="true"></div>
+
         <div class="container hero__content">
           <p class="hero__eyebrow">
             Winnemucca, Nevada
@@ -114,14 +164,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Menu
+              <span>View Menu</span>
             </a>
 
             <a
               href="tel:+17755550198"
               class="btn btn--secondary"
             >
-              Call Now
+              <span>Call Now</span>
             </a>
 
             <a
@@ -130,37 +180,101 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get Directions
+              <span>Get Directions</span>
             </a>
           </div>
         </div>
+
+        <a class="hero__scroll" href="#about" aria-label="Scroll to About">
+          <span class="hero__scroll-text">Scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
       </section>
 
-      <!-- About -->
-      <section id="about" class="section">
-        <div class="container about">
-          <div class="about__image about-video">
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-            >
-              <source
-                src="videos/0713.mp4"
-                type="video/mp4"
-              />
+      <!-- Ticker divider -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span class="ticker__group">
+            <span>Coastal Mexican Seafood &amp; Grill</span>
+            <span class="ticker__dot">✦</span>
+            <span>Fresh seafood</span>
+            <span class="ticker__dot">✦</span>
+            <span>House-made salsas</span>
+            <span class="ticker__dot">✦</span>
+            <span>Craft margaritas</span>
+            <span class="ticker__dot">✦</span>
+            <span>Family-friendly dining</span>
+            <span class="ticker__dot">✦</span>
+            <span>Winnemucca, Nevada</span>
+            <span class="ticker__dot">✦</span>
+          </span>
+          <span class="ticker__group">
+            <span>Coastal Mexican Seafood &amp; Grill</span>
+            <span class="ticker__dot">✦</span>
+            <span>Fresh seafood</span>
+            <span class="ticker__dot">✦</span>
+            <span>House-made salsas</span>
+            <span class="ticker__dot">✦</span>
+            <span>Craft margaritas</span>
+            <span class="ticker__dot">✦</span>
+            <span>Family-friendly dining</span>
+            <span class="ticker__dot">✦</span>
+            <span>Winnemucca, Nevada</span>
+            <span class="ticker__dot">✦</span>
+          </span>
+        </div>
+      </div>
 
-              Your browser does not support video
-              playback.
-            </video>
+      <!-- About -->
+      <section id="about" class="section about-section" data-reveal-root>
+        <div class="container about">
+          <div class="about__media" data-reveal>
+            <div class="about__media-frame about-video" data-video>
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                data-video-el
+              >
+                <source
+                  src="videos/0713.mp4"
+                  type="video/mp4"
+                />
+
+                Your browser does not support video
+                playback.
+              </video>
+
+              <div class="video-controls" data-video-controls>
+                <button
+                  class="video-btn"
+                  type="button"
+                  data-video-playpause
+                  aria-pressed="false"
+                  aria-label="Play video"
+                >
+                  <span class="video-btn__icon video-btn__icon--play" aria-hidden="true"></span>
+                  <span class="video-btn__icon video-btn__icon--pause" aria-hidden="true"></span>
+                </button>
+
+                <button
+                  class="video-btn"
+                  type="button"
+                  data-video-replay
+                  aria-label="Replay video"
+                >
+                  <span class="video-btn__icon video-btn__icon--replay" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
           </div>
 
           <div class="about__text">
-            <h2>About Us</h2>
+            <h2 data-reveal>About Us</h2>
 
-            <p>
+            <p data-reveal>
               Margaritas Grill brings the spirit of
               Mexico's Pacific coast to Nevada — bold
               ceviches, garlic butter camarones, and
@@ -168,22 +282,22 @@
               table.
             </p>
 
-            <p>
+            <p data-reveal>
               Our kitchen honors tradition with fresh
               seafood daily, house-made salsas, and recipes
               passed through generations.
             </p>
 
             <ul class="about__list">
-              <li>
+              <li data-reveal>
                 Fresh seafood &amp; house-made salsas
               </li>
 
-              <li>
+              <li data-reveal>
                 Full bar with craft margaritas
               </li>
 
-              <li>
+              <li data-reveal>
                 Family-friendly dining
               </li>
             </ul>
@@ -191,6 +305,7 @@
             <div
               id="menu"
               class="about__buttons"
+              data-reveal
             >
               <a
                 href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
@@ -198,7 +313,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Menu
+                <span>View Menu</span>
               </a>
 
               <a
@@ -207,7 +322,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Order Online
+                <span>Order Online</span>
               </a>
             </div>
           </div>
@@ -215,46 +330,46 @@
       </section>
 
       <!-- Location -->
-      <section id="location" class="section">
+      <section id="location" class="section location-section" data-reveal-root>
         <div class="container location">
           <div class="location__info">
-            <h2>Visit Us</h2>
+            <h2 data-reveal>Visit Us</h2>
 
-            <address>
+            <address data-reveal>
               <strong>Margaritas Grill</strong><br />
               47 East Winnemucca Blvd<br />
               Winnemucca, Nevada
             </address>
 
-            <p class="location__phone">
+            <p class="location__phone" data-reveal>
               <a href="tel:+17755550198">
                 (775) 555-0198
               </a>
             </p>
 
             <dl class="hours">
-              <div>
+              <div data-reveal>
                 <dt>Mon – Thu</dt>
                 <dd>11:00 AM – 9:00 PM</dd>
               </div>
 
-              <div>
+              <div data-reveal>
                 <dt>Fri – Sat</dt>
                 <dd>11:00 AM – 10:00 PM</dd>
               </div>
 
-              <div>
+              <div data-reveal>
                 <dt>Sunday</dt>
                 <dd>10:00 AM – 9:00 PM</dd>
               </div>
             </dl>
 
-            <div class="hero__buttons">
+            <div class="hero__buttons" data-reveal>
               <a
                 href="tel:+17755550198"
                 class="btn btn--secondary"
               >
-                Call Now
+                <span>Call Now</span>
               </a>
 
               <a
@@ -263,12 +378,12 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get Directions
+                <span>Get Directions</span>
               </a>
             </div>
           </div>
 
-          <div class="location__map">
+          <div class="location__map" data-reveal>
             <iframe
               title="Map showing Margaritas Grill in Winnemucca, Nevada"
               src="https://maps.google.com/maps?q=47+East+Winnemucca+Blvd+Winnemucca+Nevada&amp;z=15&amp;output=embed"
@@ -284,58 +399,107 @@
       <section
         id="gallery"
         class="section gallery-section"
+        data-reveal-root
       >
         <div class="gallery-container">
-          <h2 class="section__title">
+          <h2 class="section__title" data-reveal>
             Gallery
           </h2>
 
-          <div class="gallery">
-            <img
-              src="images/gallery 1.png"
-              alt="Margaritas Grill photo 1"
-              loading="lazy"
-            />
+          <div class="gallery" data-gallery>
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="0"
+              data-reveal
+            >
+              <img
+                src="images/gallery 1.png"
+                alt="Margaritas Grill photo 1"
+                loading="lazy"
+              />
+            </button>
 
-            <img
-              src="images/gallery 2.png"
-              alt="Margaritas Grill photo 2"
-              loading="lazy"
-            />
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="1"
+              data-reveal
+            >
+              <img
+                src="images/gallery 2.png"
+                alt="Margaritas Grill photo 2"
+                loading="lazy"
+              />
+            </button>
 
-            <img
-              src="images/gallery 3.png"
-              alt="Margaritas Grill photo 3"
-              loading="lazy"
-            />
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="2"
+              data-reveal
+            >
+              <img
+                src="images/gallery 3.png"
+                alt="Margaritas Grill photo 3"
+                loading="lazy"
+              />
+            </button>
 
-            <img
-              src="images/gallery 4.png"
-              alt="Margaritas Grill photo 4"
-              loading="lazy"
-            />
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="3"
+              data-reveal
+            >
+              <img
+                src="images/gallery 4.png"
+                alt="Margaritas Grill photo 4"
+                loading="lazy"
+              />
+            </button>
 
-            <img
-              src="images/gallery 5.png"
-              alt="Margaritas Grill photo 5"
-              loading="lazy"
-            />
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="4"
+              data-reveal
+            >
+              <img
+                src="images/gallery 5.png"
+                alt="Margaritas Grill photo 5"
+                loading="lazy"
+              />
+            </button>
 
-            <img
-              src="images/gallery 6.png"
-              alt="Margaritas Grill photo 6"
-              loading="lazy"
-            />
+            <button
+              type="button"
+              class="gallery__item"
+              data-gallery-item
+              data-index="5"
+              data-reveal
+            >
+              <img
+                src="images/gallery 6.png"
+                alt="Margaritas Grill photo 6"
+                loading="lazy"
+              />
+            </button>
           </div>
 
-          <div class="gallery__button">
+          <div class="gallery__button" data-reveal>
             <a
               href="https://onlineordering.edgeservpos.com/margaritasgrill/webmenu"
               class="btn btn--primary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              View More
+              <span>View More</span>
             </a>
           </div>
         </div>
@@ -346,13 +510,14 @@
         class="restaurant-reviews reviews-margaritas"
         id="reviews"
         aria-labelledby="reviews-heading"
+        data-reveal-root
       >
         <div class="reviews-shell">
-          <p class="reviews-kicker">
+          <p class="reviews-kicker" data-reveal>
             Guest Reviews
           </p>
 
-          <h2 id="reviews-heading">
+          <h2 id="reviews-heading" data-reveal>
             What Our Guests Are Saying
           </h2>
 
@@ -362,6 +527,7 @@
             aria-roledescription="carousel"
             aria-label="Guest reviews"
             tabindex="0"
+            data-reveal
           >
             <div class="reviews-track">
               <article class="review-slide">
@@ -460,6 +626,7 @@
             class="review-controls"
             role="group"
             aria-label="Review controls"
+            data-reveal
           >
             <button
               class="review-arrow"
@@ -490,10 +657,13 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer__inner">
-        <p>
-          &copy; 2026 Margaritas Grill. All rights
-          reserved.
-        </p>
+        <div class="footer__brand">
+          <a href="#home" class="footer__wordmark">Margaritas Grill</a>
+          <p>
+            &copy; <span data-year>2026</span> Margaritas Grill. All rights
+            reserved.
+          </p>
+        </div>
 
         <nav aria-label="Footer navigation">
           <a href="#home">Home</a>
@@ -506,6 +676,46 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Gallery lightbox -->
+    <dialog class="lightbox" data-lightbox aria-label="Gallery image viewer">
+      <div class="lightbox__inner">
+        <button
+          class="lightbox__close"
+          type="button"
+          data-lightbox-close
+          aria-label="Close gallery viewer"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <button
+          class="lightbox__nav lightbox__nav--prev"
+          type="button"
+          data-lightbox-prev
+          aria-label="Previous image"
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <figure class="lightbox__figure">
+          <img class="lightbox__image" data-lightbox-image src="" alt="" />
+        </figure>
+
+        <button
+          class="lightbox__nav lightbox__nav--next"
+          type="button"
+          data-lightbox-next
+          aria-label="Next image"
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="lightbox__counter">
+          <span data-lightbox-current>1</span> / <span data-lightbox-total>6</span>
+        </p>
+      </div>
+    </dialog>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
